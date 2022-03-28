@@ -1,0 +1,125 @@
+@import "blog.css";
+@import "footer.css";
+@import "header.css";
+
+body, html, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  width: 100wh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 7fr 1fr;
+  grid-template-areas:
+    "hd hd hd hd hd"
+    "main main main main main"
+    "ft ft ft ft ft";
+}
+
+.header a {
+  text-decoration: underline;
+}
+
+.content {
+  width: 97%;
+  display: grid;
+  grid-gap: 1rem;
+  margin: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-area: main;
+}
+
+button {
+  padding: 0.3rem;
+  border-radius: 50px;
+}
+
+.blog {
+  display: grid;
+  height: auto;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 5px;
+  background-color: aliceblue;
+}
+
+.blog h5 {
+  color: blue;
+}
+
+.blog h6 {
+  color: grey;
+}
+
+.one {
+  background-image: url(../images/jeans.jpg);
+  background-position: cover;
+  background-position: center;
+  color: rgb(248, 177, 177);
+  text-shadow: 2px 1px black;
+}
+
+.two {
+  background-image: url(../images/champions.jpg);
+  background-position: cover;
+  background-position: center;
+  color: rgb(248, 177, 177);
+  text-shadow: 2px 1px black;
+}
+
+.three {
+  background-image: url(../images/covid.jpg);
+  background-position: cover;
+  color: rgb(248, 177, 177);
+  text-shadow: 2px 1px black;
+}
+
+.four {
+  background-image: url(../images/exercise.jpg);
+  background-position: cover;
+  background-position: center;
+  color: rgb(248, 177, 177);
+  text-shadow: 1px 1px black;
+}
+
+.five {
+  background-image: url(../images/music.jpg);
+  background-position: cover;
+  color: rgb(248, 177, 177);
+  text-shadow: 1px 1px black;
+}
+
+.six {
+  background-image: url(../images/industry.jpg);
+  background-position: cover;
+  color: rgb(248, 177, 177);
+  text-shadow: 1px 1px black;
+}
+
+.industry{
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .content{
+    grid-template-columns: 1fr;
+  }
+  .container{
+    grid-template-rows: 1fr 14fr 1fr;
+  }
+}
+
+@media (min-width: 600px) and (max-width:900px) {
+  .content{
+    grid-template-columns: 1fr 1fr;
+    grid-gap:0.3rem;
+    margin: 0.3rem;
+    width: 98%;
+  }
+}
